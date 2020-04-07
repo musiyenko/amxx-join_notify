@@ -1,0 +1,9 @@
+[en]
+Hello = %s is joining the server!
+Bye = %s left us :(
+[ru]
+Hello = %s заходит разносить всех!
+Bye = %s покинул нас :(
+[it]
+Hello = %s si unisce al server!
+Bye = %s ci ha lasciati :(
