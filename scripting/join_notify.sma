@@ -19,6 +19,8 @@ public client_putinserver(id)
 
     get_user_name(id, szName, charsmax(szName))
 
+    set_hudmessage(0, 255, 0, 0.1, 0.35, 0, 6.0, 12.0, 0.2, 0.3, HUD_CHANNEL)
+
     show_hudmessage(0, "%L", id, "Hello", szName)
 }
 
