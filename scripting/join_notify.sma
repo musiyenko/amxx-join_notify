@@ -5,6 +5,7 @@
 #define AUTHOR "EagleVision (https://sy.mk)"
 
 #define HUD_CHANNEL 3
+//#define NOTIFY_ON_DISCONNECT
 
 
 public plugin_init()
@@ -21,8 +22,14 @@ public client_putinserver(id)
 
     set_hudmessage(0, 255, 0, 0.1, 0.35, 0, 6.0, 12.0, 0.2, 0.3, HUD_CHANNEL)
 
-    show_hudmessage(0, "%L", id, "Hello", szName)
+    if (is_user_hltv(id)) {
+        show_hudmessage(0, "%L", id, "HLTV", szName)
+    } else {
+        show_hudmessage(0, "%L", id, "Hello", szName)
+    }    
 }
+
+#if defined NOTIFY_ON_DISCONNECT
 
 public client_disconnected(id)
 {
@@ -32,5 +39,9 @@ public client_disconnected(id)
 
     set_hudmessage(0, 255, 0, 0.1, 0.35, 0, 6.0, 12.0, 0.2, 0.3, HUD_CHANNEL)
     
-    show_hudmessage(0, "%L", id, "Bye", szName)
+    if (!is_user_hltv(id)) {
+        show_hudmessage(0, "%L", id, "Bye", szName)
+    }
 }
+
+#endif

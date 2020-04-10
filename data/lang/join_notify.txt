@@ -1,9 +1,12 @@
 [en]
 Hello = %s is joining the server!
 Bye = %s left us :(
+HLTV = %s is recording the match
 [ru]
 Hello = %s заходит разносить всех!
 Bye = %s покинул нас :(
+HLTV = %s начинает запись игры
 [it]
 Hello = %s si unisce al server!
 Bye = %s ci ha lasciati :(
+HLTV = %s sta registrando la partita
