@@ -23,9 +23,9 @@ public client_putinserver(id)
     set_hudmessage(0, 255, 0, 0.1, 0.35, 0, 6.0, 12.0, 0.2, 0.3, HUD_CHANNEL)
 
     if (is_user_hltv(id)) {
-        show_hudmessage(0, "%L", id, "HLTV", szName)
+        show_hudmessage(0, "%L", LANG_PLAYER, "HLTV", szName)
     } else {
-        show_hudmessage(0, "%L", id, "Hello", szName)
+        show_hudmessage(0, "%L", LANG_PLAYER, "Hello", szName)
     }    
 }
 
@@ -40,7 +40,7 @@ public client_disconnected(id)
     set_hudmessage(0, 255, 0, 0.1, 0.35, 0, 6.0, 12.0, 0.2, 0.3, HUD_CHANNEL)
     
     if (!is_user_hltv(id)) {
-        show_hudmessage(0, "%L", id, "Bye", szName)
+        show_hudmessage(0, "%L", LANG_PLAYER, "Bye", szName)
     }
 }
 
